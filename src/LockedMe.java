@@ -15,17 +15,17 @@ public class LockedMe {
         System.out.println("DIRECTORY : "+ folder_name.getAbsolutePath());
     }
 
-    private static final String WELCOME_PROMPT =
+    private static final String welcomeScreen =
             "\n*****************  LockedMe.com *******************"+
                     "\n***************** Harsh Kurulkar *******************\n";
 
-    private static final String MAIN_MENU_PROMPT =
+    private static final String MAIN_MENU =
             "\nMAIN MENU - Select any of the following: \n"+
                     "1 -> List files in directory\n"+
-                    "2 -> Add, Delete or Search\n"+
+                    "2 -> Buisness Level Operations\n"+
                     "3 -> Exit Program";
 
-    private static final String SECONDARY_MENU_PROMPT =
+    private static final String SECONDARY_MENU =
             "   \nSelect any of the following: \n"+
                     "   a -> Add a file\n"+
                     "   b -> Delete a file\n"+
@@ -33,7 +33,7 @@ public class LockedMe {
                     "   d -> GoBack";
 
     void showPrimaryMenu() {
-        System.out.println(MAIN_MENU_PROMPT);
+        System.out.println(MAIN_MENU);
         try{
             Scanner scanner = new Scanner(System.in);
             int option = scanner.nextInt();
@@ -59,7 +59,7 @@ public class LockedMe {
     }
 
     void showSecondaryMenu() {
-        System.out.println(SECONDARY_MENU_PROMPT);
+        System.out.println(SECONDARY_MENU);
         try{
             Scanner scanner = new Scanner(System.in);
             char[] input = scanner.nextLine().toLowerCase().trim().toCharArray();
@@ -149,7 +149,7 @@ public class LockedMe {
     }
 
     public static void main(String[] args) {
-        System.out.println(WELCOME_PROMPT);
+        System.out.println(welcomeScreen);
         LockedMe menu = new LockedMe();
         menu.showPrimaryMenu();
     }
